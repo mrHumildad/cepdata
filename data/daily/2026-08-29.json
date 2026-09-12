@@ -27,7 +27,7 @@
     "precAcc": 0.0
   },
   "C9": {
-    "tempAvg": 24.6,
+    "tempAvg": 24.7,
     "tempMin": 17.6,
     "tempMax": 30.4,
     "humAvg": 46.3,
@@ -486,7 +486,7 @@
     "precAcc": 0.0
   },
   "UA": {
-    "tempAvg": 24.5,
+    "tempAvg": 24.4,
     "tempMin": 18.0,
     "tempMax": 29.4,
     "humAvg": 54.0,
@@ -1071,7 +1071,7 @@
     "precAcc": 0.0
   },
   "X1": {
-    "tempAvg": 23.6,
+    "tempAvg": 23.7,
     "tempMin": 16.9,
     "tempMax": 31.3,
     "humAvg": 50.2,

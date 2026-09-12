@@ -954,7 +954,7 @@
     "precAcc": 0.0
   },
   "WM": {
-    "tempAvg": 26.0,
+    "tempAvg": 26.1,
     "tempMin": 20.5,
     "tempMax": 33.9,
     "humAvg": 51.9,
@@ -1224,7 +1224,7 @@
     "precAcc": 0.0
   },
   "XJ": {
-    "tempAvg": 27.4,
+    "tempAvg": 27.3,
     "tempMin": 18.2,
     "tempMax": 37.2,
     "humAvg": 70.3,

@@ -270,7 +270,7 @@
     "precAcc": 0.0
   },
   "DJ": {
-    "tempAvg": 28.9,
+    "tempAvg": 28.8,
     "tempMin": 22.8,
     "tempMax": 34.5,
     "humAvg": 44.4,
@@ -1152,7 +1152,7 @@
     "precAcc": 0.0
   },
   "XB": {
-    "tempAvg": 26.0,
+    "tempAvg": 26.1,
     "tempMin": 19.3,
     "tempMax": 33.8,
     "humAvg": 54.4,
@@ -1674,7 +1674,7 @@
     "precAcc": 0.0
   },
   "ZC": {
-    "tempAvg": 16.5,
+    "tempAvg": 16.4,
     "tempMin": 12.2,
     "tempMax": 18.5,
     "humAvg": 52.5,

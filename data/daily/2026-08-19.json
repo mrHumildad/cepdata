@@ -297,7 +297,7 @@
     "precAcc": 0.0
   },
   "DN": {
-    "tempAvg": 27.9,
+    "tempAvg": 27.8,
     "tempMin": 19.9,
     "tempMax": 37.1,
     "humAvg": 76.0,
@@ -396,7 +396,7 @@
     "precAcc": 0.0
   },
   "MR": {
-    "tempAvg": 28.5,
+    "tempAvg": 28.4,
     "tempMin": 20.6,
     "tempMax": 39.2,
     "humAvg": 57.3,
@@ -900,7 +900,7 @@
     "precAcc": 0.0
   },
   "WC": {
-    "tempAvg": 28.9,
+    "tempAvg": 28.8,
     "tempMin": 19.8,
     "tempMax": 38.4,
     "humAvg": 61.9,

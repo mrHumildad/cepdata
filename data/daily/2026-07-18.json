@@ -1008,7 +1008,7 @@
     "precAcc": 0.0
   },
   "WS": {
-    "tempAvg": 24.0,
+    "tempAvg": 24.1,
     "tempMin": 18.6,
     "tempMax": 30.4,
     "humAvg": 61.4,
@@ -1107,7 +1107,7 @@
     "precAcc": 2.3
   },
   "X6": {
-    "tempAvg": 28.9,
+    "tempAvg": 28.8,
     "tempMin": 21.4,
     "tempMax": 35.9,
     "humAvg": 48.3,
@@ -1260,7 +1260,7 @@
     "precAcc": 0.0
   },
   "XN": {
-    "tempAvg": 28.9,
+    "tempAvg": 28.8,
     "tempMin": 21.2,
     "tempMax": 36.8,
     "humAvg": 60.3,

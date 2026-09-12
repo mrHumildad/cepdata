@@ -342,7 +342,7 @@
     "precAcc": 0.0
   },
   "J5": {
-    "tempAvg": 27.7,
+    "tempAvg": 27.8,
     "tempMin": 21.9,
     "tempMax": 34.2,
     "humAvg": 72.3,
@@ -1053,7 +1053,7 @@
     "precAcc": 0.0
   },
   "WX": {
-    "tempAvg": 29.4,
+    "tempAvg": 29.3,
     "tempMin": 22.9,
     "tempMax": 36.7,
     "humAvg": 32.2,

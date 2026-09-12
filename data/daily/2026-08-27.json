@@ -324,7 +324,7 @@
     "precAcc": 0.0
   },
   "DQ": {
-    "tempAvg": 26.9,
+    "tempAvg": 26.8,
     "tempMin": 23.4,
     "tempMax": 32.3,
     "humAvg": 66.7,
@@ -774,7 +774,7 @@
     "precAcc": 0.0
   },
   "VQ": {
-    "tempAvg": 27.0,
+    "tempAvg": 27.1,
     "tempMin": 22.9,
     "tempMax": 31.2,
     "humAvg": 71.4,
@@ -855,7 +855,7 @@
     "precAcc": 0.0
   },
   "W5": {
-    "tempAvg": 26.0,
+    "tempAvg": 26.1,
     "tempMin": 19.8,
     "tempMax": 34.7,
     "humAvg": 51.1,
@@ -1476,7 +1476,7 @@
     "precAcc": 0.0
   },
   "YJ": {
-    "tempAvg": 27.1,
+    "tempAvg": 27.2,
     "tempMin": 20.8,
     "tempMax": 35.1,
     "humAvg": 57.4,

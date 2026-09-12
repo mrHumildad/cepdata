@@ -306,7 +306,7 @@
     "precAcc": 0.0
   },
   "DO": {
-    "tempAvg": 26.0,
+    "tempAvg": 25.9,
     "tempMin": 19.3,
     "tempMax": 30.7,
     "humAvg": 59.8,
@@ -612,7 +612,7 @@
     "precAcc": 0.0
   },
   "US": {
-    "tempAvg": 28.7,
+    "tempAvg": 28.8,
     "tempMin": 26.8,
     "tempMax": 30.5,
     "humAvg": 86.9,
@@ -882,7 +882,7 @@
     "precAcc": 0.0
   },
   "WA": {
-    "tempAvg": 28.5,
+    "tempAvg": 28.4,
     "tempMin": 19.3,
     "tempMax": 37.6,
     "humAvg": 43.3,

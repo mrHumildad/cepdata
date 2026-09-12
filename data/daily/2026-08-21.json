@@ -36,7 +36,7 @@
     "precAcc": 0.0
   },
   "CC": {
-    "tempAvg": 21.9,
+    "tempAvg": 21.8,
     "tempMin": 17.3,
     "tempMax": 28.1,
     "humAvg": 68.4,
@@ -1287,7 +1287,7 @@
     "precAcc": 0.0
   },
   "XQ": {
-    "tempAvg": 22.1,
+    "tempAvg": 22.2,
     "tempMin": 15.3,
     "tempMax": 29.0,
     "humAvg": 62.6,

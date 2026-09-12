@@ -657,7 +657,7 @@
     "precAcc": 0.0
   },
   "V1": {
-    "tempAvg": 27.9,
+    "tempAvg": 27.8,
     "tempMin": 21.4,
     "tempMax": 35.8,
     "humAvg": 50.3,
@@ -1530,7 +1530,7 @@
     "precAcc": 0.4
   },
   "YP": {
-    "tempAvg": 25.0,
+    "tempAvg": 24.9,
     "tempMin": 18.9,
     "tempMax": 31.8,
     "humAvg": 70.1,
@@ -1548,7 +1548,7 @@
     "precAcc": 0.0
   },
   "YR": {
-    "tempAvg": 28.4,
+    "tempAvg": 28.3,
     "tempMin": 23.6,
     "tempMax": 32.9,
     "humAvg": 61.8,

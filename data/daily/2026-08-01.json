@@ -252,7 +252,7 @@
     "precAcc": 0.0
   },
   "DG": {
-    "tempAvg": 17.5,
+    "tempAvg": 17.4,
     "tempMin": 13.2,
     "tempMax": 23.1,
     "humAvg": 58.4,
@@ -468,7 +468,7 @@
     "precAcc": 0.0
   },
   "U7": {
-    "tempAvg": 28.4,
+    "tempAvg": 28.3,
     "tempMin": 24.0,
     "tempMax": 34.2,
     "humAvg": 71.2,
@@ -1647,7 +1647,7 @@
     "precAcc": 0.0
   },
   "Z7": {
-    "tempAvg": 15.9,
+    "tempAvg": 15.8,
     "tempMin": 13.6,
     "tempMax": 19.4,
     "humAvg": 54.6,

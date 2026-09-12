@@ -126,7 +126,7 @@
     "precAcc": 0.0
   },
   "CT": {
-    "tempAvg": 20.5,
+    "tempAvg": 20.4,
     "tempMin": 9.4,
     "tempMax": 30.9,
     "humAvg": 55.4,
@@ -1035,7 +1035,7 @@
     "precAcc": 0.0
   },
   "WV": {
-    "tempAvg": 22.1,
+    "tempAvg": 22.2,
     "tempMin": 11.8,
     "tempMax": 30.8,
     "humAvg": 59.6,

@@ -99,7 +99,7 @@
     "precAcc": 0.0
   },
   "CP": {
-    "tempAvg": 24.5,
+    "tempAvg": 24.6,
     "tempMin": 17.0,
     "tempMax": 32.5,
     "humAvg": 49.4,
@@ -1044,7 +1044,7 @@
     "precAcc": 0.0
   },
   "WW": {
-    "tempAvg": 23.0,
+    "tempAvg": 23.1,
     "tempMin": 12.7,
     "tempMax": 33.1,
     "humAvg": 61.7,

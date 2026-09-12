@@ -882,7 +882,7 @@
     "precAcc": 44.7
   },
   "WA": {
-    "tempAvg": 21.0,
+    "tempAvg": 20.9,
     "tempMin": 14.7,
     "tempMax": 25.7,
     "humAvg": 57.7,
@@ -1014,7 +1014,7 @@
     "humAvg": 92.8,
     "humMin": 76.0,
     "humMax": 99.0,
-    "precAcc": 2.1
+    "precAcc": null
   },
   "WT": {
     "tempAvg": 20.7,
@@ -1287,7 +1287,7 @@
     "precAcc": 0.0
   },
   "XQ": {
-    "tempAvg": 21.6,
+    "tempAvg": 21.7,
     "tempMin": 15.1,
     "tempMax": 25.5,
     "humAvg": 50.0,
@@ -1707,7 +1707,7 @@
     "humAvg": 69.1,
     "humMin": 14.0,
     "humMax": 100.0,
-    "precAcc": 1498.1,
+    "precAcc": 1496.0,
     "precMin": 0,
     "precMax": 80.8
   }

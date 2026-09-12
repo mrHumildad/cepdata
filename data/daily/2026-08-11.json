@@ -846,7 +846,7 @@
     "precAcc": 0.0
   },
   "W4": {
-    "tempAvg": 27.7,
+    "tempAvg": 27.8,
     "tempMin": 20.6,
     "tempMax": 34.8,
     "humAvg": 64.3,
@@ -1080,7 +1080,7 @@
     "precAcc": 0.0
   },
   "X3": {
-    "tempAvg": 28.0,
+    "tempAvg": 28.1,
     "tempMin": 21.6,
     "tempMax": 36.3,
     "humAvg": 52.4,
@@ -1215,7 +1215,7 @@
     "precAcc": 38.7
   },
   "XI": {
-    "tempAvg": 28.4,
+    "tempAvg": 28.3,
     "tempMin": 19.5,
     "tempMax": 37.1,
     "humAvg": 60.9,

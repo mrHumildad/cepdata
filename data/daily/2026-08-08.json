@@ -36,7 +36,7 @@
     "precAcc": 0.0
   },
   "CC": {
-    "tempAvg": 25.5,
+    "tempAvg": 25.4,
     "tempMin": 16.2,
     "tempMax": 34.2,
     "humAvg": 56.0,
@@ -603,7 +603,7 @@
     "precAcc": 0.0
   },
   "UQ": {
-    "tempAvg": 26.2,
+    "tempAvg": 26.3,
     "tempMin": 21.6,
     "tempMax": 31.3,
     "humAvg": 62.1,

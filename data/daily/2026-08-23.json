@@ -216,7 +216,7 @@
     "precAcc": 0.0
   },
   "D8": {
-    "tempAvg": 25.4,
+    "tempAvg": 25.3,
     "tempMin": 21.2,
     "tempMax": 30.3,
     "humAvg": 68.1,
@@ -1278,7 +1278,7 @@
     "precAcc": 0.0
   },
   "XP": {
-    "tempAvg": 26.0,
+    "tempAvg": 26.1,
     "tempMin": 22.5,
     "tempMax": 32.4,
     "humAvg": 72.9,
@@ -1557,7 +1557,7 @@
     "precAcc": 0.0
   },
   "YS": {
-    "tempAvg": 24.1,
+    "tempAvg": 24.2,
     "tempMin": 17.3,
     "tempMax": 30.4,
     "humAvg": 73.8,
