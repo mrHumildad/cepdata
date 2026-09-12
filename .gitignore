@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+__pycache__/
+*.pyc
+
+# Python venv for the build scripts (fiona/rasterio/shapely)
+meteokat/venv
+
+# Raw scraped XEMA payloads (rebuilt daily by CI; too big for git). The
+# committed artifact is the aggregated data/daily/ shards instead.
+dades_*.json
+meteokat/dades_*.json
+full_dades.json
+meteokat/full_dades.json
+
+# Raw ICGC geology download (155 MB zip / 283 MB gpkg) — source for
+# build_lithology.py only.
+meteokat/raw
+
+# Staging output of the one-off build scripts (build_lithology.py,
+# mcsc_sample.py); the finished artifacts are copied into the CLIENT repo.
+build/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

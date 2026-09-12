@@ -1,0 +1,77 @@
+# Scrapes Meteocat XEMA raw data, re-aggregates the daily per-station
+# summaries (data/daily/*.json + index.json) and commits the result.
+#
+# This repo is the SERVER half of meteoscat. It is the only repo the cron job
+# writes to: the client app lives in a separate repo and its git history and
+# Pages deploys are not touched by the daily refresh. The client picks the
+# shards up at runtime from this repo's Pages data site.
+#
+# Why a rolling window of 60 days: past days are re-fetched and re-aggregated
+# every run, so Meteocat corrections propagate automatically and outages
+# self-heal. Day shards that don't change keep the same git blob SHA, so
+# history grows by roughly one ~30 KB shard per day.
+#
+# Only data/daily is committed. The raw archive (meteokat/full_dades.json,
+# ~70 MB for 30 days) is rebuilt by the scraper and gitignored on purpose:
+# committing it daily would bloat the history.
+
+name: daily data
+
+on:
+  schedule:
+    - cron: '30 6 * * *' # 06:30 UTC (morning CAT/CEST) — previous day is final
+  workflow_dispatch:
+    inputs:
+      days:
+        description: Rolling window in days to scrape
+        required: false
+        default: '60'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-data
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r meteokat/requirements.txt
+
+      # A fresh checkout restores the old per-day dades_*.json payloads from
+      # git HEAD; remove them so aggregation can only use the new scrape.
+      - name: Clean stale raw payloads
+        run: rm -f meteokat/dades_*.json meteokat/full_dades.json
+
+      - name: Scrape Meteocat XEMA (rolling window)
+        working-directory: meteokat
+        run: python scrapeMap.py ${{ inputs.days || '60' }}
+
+      - name: Aggregate daily per-station summaries
+        working-directory: meteokat
+        run: python aggregate.py
+
+      - name: Commit fresh daily shards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/daily
+          if git diff --cached --quiet; then
+            echo "No data changes — nothing to commit."
+          else
+            git commit -m "refresh daily meteo summaries"
+            git push
+          fi

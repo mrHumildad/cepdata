@@ -1,0 +1,57 @@
+# Publishes data/ as this repo's GitHub Pages site — the "data site" the
+# client fetches daily shards from at runtime (VITE_DATA_BASE_URL).
+#
+# Runs whenever data/daily changes on main, i.e. right after the daily-data
+# workflow's commit. Nothing here builds or deploys the app: the client is a
+# separate repo with its own Pages deployment.
+#
+# GitHub Pages serves the files with `Access-Control-Allow-Origin: *`, so the
+# client's cross-origin fetch of data/daily/*.json works without a proxy.
+#
+# Requires Pages enabled in THIS repo with source "GitHub Actions"
+# (Settings → Pages). The site URL is
+# https://<owner>.github.io/<this-repo>/ → data at .../daily/index.json
+
+name: deploy data site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload data site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./data
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy data site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
