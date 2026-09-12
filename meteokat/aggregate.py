@@ -8,12 +8,18 @@ aggregation server-side and emits one small file per day:
     data/daily/YYYY-MM-DD.json   -> { "<stationCodi>": {tempAvg, tempMin,
                                       tempMax, humAvg, humMin, humMax,
                                       precAcc}, ..., "dayStats": {...} }
-    data/daily/index.json        -> ["YYYY-MM-DD", ...] (oldest first), naming
-                                      every shard on disk rather than only this
-                                      run's window (see main()).
+    data/daily/index.json        -> ["YYYY-MM-DD", ...] (oldest first) for the
+                                      retained window (see main()).
 
 These shards are published as this repo's GitHub Pages "data site"; the client
 app fetches them from VITE_DATA_BASE_URL (see client/.env.production).
+
+Retention: data/daily is a rolling window, not an archive. After writing this
+run's shards, every shard older than --keep-days (default 60) is deleted and
+dropped from index.json, so the checkout, the published Pages artifact and the
+client's fetch list all stay ~60 files. The scrape window and the retention
+window are the same 60 days, so nothing on disk is un-re-checked: shards older
+than the window would be frozen data anyway.
 
 The math mirrors src/logic/refineData.js exactly so swapping the client
 import for a fetch of these files produces identical results:
@@ -32,6 +38,7 @@ Usage:
     python aggregate.py                      # auto-detect raw source
     python aggregate.py --raw ../full_dades.json
     python aggregate.py --raw 'meteokat/dades_*.json'
+    python aggregate.py --keep-days 60       # rolling retention (default 60)
 """
 # NOTE: this repo is the SERVER half of meteoscat. It owns the scrapers, the
 # daily shards under data/daily/ and the one-off build scripts; the client app
@@ -58,6 +65,11 @@ DEFAULT_RAW_CANDIDATES = [
 ]
 
 SUMMARY_VARS = ["temperatura", "humitat", "precipitacio"]
+
+# Rolling retention for data/daily. Matches the scrape window in
+# daily-data.yml (60 days), so the data site is exactly the window that is
+# still being re-checked for Meteocat corrections.
+DEFAULT_KEEP_DAYS = 60
 
 # Day shard file names; used to rebuild the index from what is on disk.
 DAY_FILE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -206,6 +218,13 @@ def main():
         default=str(DEFAULT_OUT),
         help=f"output directory for daily shards (default: {DEFAULT_OUT})",
     )
+    parser.add_argument(
+        "--keep-days",
+        type=int,
+        default=DEFAULT_KEEP_DAYS,
+        help="how many of the newest day shards to keep; older ones are "
+        f"deleted (default: {DEFAULT_KEEP_DAYS}). Use 0 to keep everything.",
+    )
     args = parser.parse_args()
 
     sources = args.raw or DEFAULT_RAW_CANDIDATES
@@ -229,23 +248,30 @@ def main():
         print(f"{day}: {shard.stat().st_size // 1024} KB, "
               f"{len(summaries) - 1} stations")
 
-    # The index names every shard on disk, not just the days scraped in this
-    # run. The daily job re-runs over a rolling window, so rebuilding the index
-    # from raw_days alone would silently retire everything older than the
-    # window: the shard files survive (nothing here deletes them) but the client
-    # only ever fetches days the index lists, so those days would vanish from
-    # the app. It also keeps a day whose scrape failed but whose shard already
-    # exists, instead of dropping it until a later run happens to succeed.
-    days_on_disk = {
+    # Retention. The published data site is a rolling window, not an archive:
+    # keep the newest --keep-days shards and delete anything older, so the
+    # checkout, the Pages artifact and the client's fetch list stay bounded.
+    # Shards are never corrected once they fall outside the scrape window, so
+    # nothing that gets deleted here was still being re-checked.
+    days_on_disk = sorted(
         path.stem for path in out_dir.glob("*.json") if DAY_FILE_RE.match(path.stem)
-    }
-    index = sorted(days_on_disk | set(raw_days))
+    )
+    stale = days_on_disk[: -args.keep_days] if args.keep_days > 0 else []
+    for day in stale:
+        (out_dir / f"{day}.json").unlink()
+
+    # Index the shards that survived. Building it from disk (rather than from
+    # raw_days alone) keeps a day whose scrape failed but whose shard already
+    # exists, and guarantees the index never names a file this run just pruned.
+    # Every raw day was written as a shard above, so nothing is missing here.
+    index = sorted(set(days_on_disk) - set(stale))
     (out_dir / "index.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+    pruned = f", pruned {len(stale)} older shard(s)" if stale else ""
     print(
         f"\nWrote {len(raw_days)} day shards + index.json "
-        f"({len(index)} days total) to {out_dir}"
+        f"({len(index)} days total{pruned}) to {out_dir}"
     )
 
 

@@ -8,8 +8,11 @@
 #
 # Why a rolling window of 60 days: past days are re-fetched and re-aggregated
 # every run, so Meteocat corrections propagate automatically and outages
-# self-heal. Day shards that don't change keep the same git blob SHA, so
-# history grows by roughly one ~30 KB shard per day.
+# self-heal. The window is also the retention policy — aggregate.py deletes
+# shards older than --keep-days (60), so data/daily stays a rolling window
+# rather than growing forever, and the commit below removes the pruned files
+# (git add stages deletions too). Days outside the window are never re-checked
+# again, so keeping them would only publish frozen data.
 #
 # Only data/daily is committed. The raw archive (meteokat/full_dades.json,
 # ~70 MB for 30 days) is rebuilt by the scraper and gitignored on purpose:
@@ -72,7 +75,11 @@ jobs:
 
       - name: Aggregate daily per-station summaries
         working-directory: meteokat
-        run: python aggregate.py
+        # Retention is deliberately fixed at the normal 60-day window, NOT tied
+        # to the `days` dispatch input: a one-off `days: 10` run would otherwise
+        # permanently prune 50 days of published data. Default matches
+        # DEFAULT_KEEP_DAYS in aggregate.py.
+        run: python aggregate.py --keep-days 60
 
       - name: Commit fresh daily shards
         run: |

@@ -16,7 +16,7 @@ churn.
 | Path | What it is |
 | :--- | :--- |
 | `meteokat/scrapeMap.py` | Scrapes the XEMA daily page for a rolling window of days → `meteokat/full_dades.json` (gitignored) |
-| `meteokat/aggregate.py` | Turns the raw payloads into `data/daily/YYYY-MM-DD.json`; `index.json` lists every shard in `data/daily/` |
+| `meteokat/aggregate.py` | Turns the raw payloads into `data/daily/YYYY-MM-DD.json`, deletes shards older than `--keep-days` (default 60) and writes `index.json` |
 | `data/daily/` | **The published artifact** — committed by CI, served by Pages |
 | `config/stations.json` | Server-local copy of the client's `src/logic/stations.json` (station-code seed list) |
 | `meteokat/build_lithology.py` | One-off: builds the geology grid into `build/` (needs ICGC GeoPackage in `meteokat/raw/`) |
@@ -41,14 +41,30 @@ the commit would update git while the data site kept serving the previous
 deployment. If the app shows stale days, check that `deploy-data.yml` run
 appears in the Actions tab — not just the `daily-data.yml` commit.
 
-### Refresh window vs. accumulated history
+### Rolling window (60 days, no archive)
 
-The scrape window is rolling: every run re-fetches the last 60 days so Meteocat
-corrections propagate and missed days heal. `data/daily/` is *not* rolling —
-shards are never deleted, and `index.json` is rebuilt from the shard files on
-disk rather than from the current window alone. So the app keeps offering every
-day ever published even though only the last 60 are re-checked. Days older than
-the window are frozen: they stay readable but no longer receive corrections.
+Both windows are the same 60 days:
+
+- **Scrape** — every run re-fetches the last 60 days so Meteocat corrections
+  propagate and missed days heal. `scrapeMap.py 60`.
+- **Retention** — `aggregate.py --keep-days 60` (the default) deletes shards
+  older than the newest 60 and drops them from `index.json` in the same run.
+
+So `data/daily/` holds exactly the days that are still being re-checked, and
+the checkout, the published Pages artifact and the client's fetch list all stay
+bounded at ~60 shards (~1.9 MB). Days older than the window are frozen — they
+would receive no further corrections anyway, which is why they are not kept.
+
+Because the delete happens before the index is written, the index is rebuilt
+from the shards that survived: it can never name a file the run just pruned.
+CI commits the removals with the same `git add data/daily` — `git add` stages
+file deletions too, so no extra step is needed.
+
+To keep a longer history, raise `--keep-days` (and the scrape window to match).
+Note that old shards are read by the client for look-back windows, so anything
+past 60 days only reaches the UI if the client's `DEFAULTDAYRANGE` is raised
+too. Use `--keep-days 0` to disable retention entirely and go back to an
+append-only archive.
 
 Run it by hand:
 
@@ -56,7 +72,7 @@ Run it by hand:
 pip install -r meteokat/requirements.txt
 cd meteokat
 python scrapeMap.py 60   # writes meteokat/full_dades.json
-python aggregate.py      # writes ../data/daily/
+python aggregate.py      # writes ../data/daily/, prunes older than 60 days
 ```
 
 `aggregate.py` mirrors `src/logic/refineData.js` in the client exactly, so the
