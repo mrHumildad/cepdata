@@ -8,7 +8,9 @@ aggregation server-side and emits one small file per day:
     data/daily/YYYY-MM-DD.json   -> { "<stationCodi>": {tempAvg, tempMin,
                                       tempMax, humAvg, humMin, humMax,
                                       precAcc}, ..., "dayStats": {...} }
-    data/daily/index.json        -> ["YYYY-MM-DD", ...] (oldest first)
+    data/daily/index.json        -> ["YYYY-MM-DD", ...] (oldest first), naming
+                                      every shard on disk rather than only this
+                                      run's window (see main()).
 
 These shards are published as this repo's GitHub Pages "data site"; the client
 app fetches them from VITE_DATA_BASE_URL (see client/.env.production).
@@ -56,6 +58,9 @@ DEFAULT_RAW_CANDIDATES = [
 ]
 
 SUMMARY_VARS = ["temperatura", "humitat", "precipitacio"]
+
+# Day shard file names; used to rebuild the index from what is on disk.
+DAY_FILE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def safe_avg(values):
@@ -224,11 +229,24 @@ def main():
         print(f"{day}: {shard.stat().st_size // 1024} KB, "
               f"{len(summaries) - 1} stations")
 
-    index = list(raw_days.keys())
+    # The index names every shard on disk, not just the days scraped in this
+    # run. The daily job re-runs over a rolling window, so rebuilding the index
+    # from raw_days alone would silently retire everything older than the
+    # window: the shard files survive (nothing here deletes them) but the client
+    # only ever fetches days the index lists, so those days would vanish from
+    # the app. It also keeps a day whose scrape failed but whose shard already
+    # exists, instead of dropping it until a later run happens to succeed.
+    days_on_disk = {
+        path.stem for path in out_dir.glob("*.json") if DAY_FILE_RE.match(path.stem)
+    }
+    index = sorted(days_on_disk | set(raw_days))
     (out_dir / "index.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print(f"\nWrote {len(index)} day shards + index.json to {out_dir}")
+    print(
+        f"\nWrote {len(raw_days)} day shards + index.json "
+        f"({len(index)} days total) to {out_dir}"
+    )
 
 
 if __name__ == "__main__":

@@ -1,9 +1,16 @@
 # Publishes data/ as this repo's GitHub Pages site — the "data site" the
 # client fetches daily shards from at runtime (VITE_DATA_BASE_URL).
 #
-# Runs whenever data/daily changes on main, i.e. right after the daily-data
-# workflow's commit. Nothing here builds or deploys the app: the client is a
-# separate repo with its own Pages deployment.
+# Runs when data/daily changes on main — but NOT automatically after the daily
+# workflow's commit: that commit is pushed with GITHUB_TOKEN, and GitHub never
+# triggers workflows from events raised by GITHUB_TOKEN (it would allow infinite
+# recursion). daily-data.yml therefore dispatches this workflow explicitly once
+# its push is done, which is the one exception GitHub allows. The push trigger
+# below still covers a human pushing data/ by hand.
+#
+# Do not "fix" this by expecting the daily commit to trigger us: it will look
+# like the cron job silently stopped updating the data site, because the shards
+# do change in git while Pages keeps serving the previous deployment.
 #
 # GitHub Pages serves the files with `Access-Control-Allow-Origin: *`, so the
 # client's cross-origin fetch of data/daily/*.json works without a proxy.

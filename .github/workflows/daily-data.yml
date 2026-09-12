@@ -14,6 +14,14 @@
 # Only data/daily is committed. The raw archive (meteokat/full_dades.json,
 # ~70 MB for 30 days) is rebuilt by the scraper and gitignored on purpose:
 # committing it daily would bloat the history.
+#
+# Publishing: the commit below is pushed with the default GITHUB_TOKEN, and
+# GitHub deliberately does NOT trigger other workflows from events raised by
+# GITHUB_TOKEN. So the push would leave deploy-data.yml asleep and the Pages
+# data site serving yesterday's shards — the data would land in git and still
+# never reach the app. workflow_dispatch is the documented exception, so the
+# "Publish the data site" step asks deploy-data.yml to run explicitly (hence
+# the actions: write permission below).
 
 name: daily data
 
@@ -29,6 +37,8 @@ on:
 
 permissions:
   contents: write
+  # Needed so the GITHUB_TOKEN may dispatch deploy-data.yml (see the header).
+  actions: write
 
 concurrency:
   group: daily-data
@@ -75,3 +85,12 @@ jobs:
             git commit -m "refresh daily meteo summaries"
             git push
           fi
+
+      # The push above cannot trigger deploy-data.yml on its own (GITHUB_TOKEN
+      # events are suppressed), so dispatch it here. Always dispatched, not just
+      # on change: a data site whose earlier deploy failed then self-heals on the
+      # next run instead of staying stale until the data happens to change again.
+      - name: Publish the data site
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-data.yml --ref main
