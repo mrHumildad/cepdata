@@ -18,7 +18,8 @@ import for a fetch of these files produces identical results:
   - hourly values are collected per station per day (nulls skipped)
   - precAcc = max of non-null 30-min precipitation readings (XEMA values are
     the running daily accumulation, so max == daily total)
-  - averages are rounded to 1 decimal place
+  - averages are rounded to 1 decimal place, and so is the dayStats
+    precipitation total (a plain float sum drifts: 1.7 -> 1.7000000000000004)
   - dayStats is the global aggregate across stations per day
 
 Raw sources may be either a combined full_dades.json
@@ -70,6 +71,20 @@ def safe_avg(values):
         return None
     mean = sum(values) / len(values)
     return float(Decimal(mean).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+
+
+def safe_sum(values):
+    """sum(values) quantized to 1 decimal, 0 on empty.
+
+    Binary float addition accumulates rounding noise across ~190 stations:
+    summing one-decimal precipitations lands on values like
+    1.7000000000000004. Every other dayStats field is quantized to 0.1, so the
+    total has to be too — otherwise the JSON carries meaningless precision.
+    """
+    if not values:
+        return 0
+    total = sum(values)
+    return float(Decimal(total).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
 
 
 def safe_min(values):
@@ -163,7 +178,7 @@ def _day_stats(summaries):
         "humAvg": safe_avg(hum_avgs),
         "humMin": safe_min(hum_mins),
         "humMax": safe_max(hum_maxs),
-        "precAcc": sum(prec_accs),
+        "precAcc": safe_sum(prec_accs),
         "precMin": 0,
         "precMax": safe_max(prec_accs),
     }

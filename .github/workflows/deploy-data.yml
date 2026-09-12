@@ -8,9 +8,10 @@
 # GitHub Pages serves the files with `Access-Control-Allow-Origin: *`, so the
 # client's cross-origin fetch of data/daily/*.json works without a proxy.
 #
-# Requires Pages enabled in THIS repo with source "GitHub Actions"
-# (Settings → Pages). The site URL is
-# https://<owner>.github.io/<this-repo>/ → data at .../daily/index.json
+# `enablement: true` below turns Pages on via the API on the first run, so no
+# manual Settings → Pages step is needed (this is the only repo whose Pages the
+# workflow publishes). The site URL is
+# https://mrhumildad.github.io/cepdata/ → data at .../daily/index.json
 
 name: deploy data site
 
@@ -39,6 +40,9 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Enables the Pages site if it does not exist yet (needs pages: write).
+          enablement: true
 
       - name: Upload data site artifact
         uses: actions/upload-pages-artifact@v3

@@ -1707,7 +1707,7 @@
     "humAvg": 60.8,
     "humMin": 11.0,
     "humMax": 100.0,
-    "precAcc": 0.30000000000000004,
+    "precAcc": 0.3,
     "precMin": 0,
     "precMax": 0.1
   }
