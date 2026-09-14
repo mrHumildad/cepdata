@@ -78,7 +78,7 @@
     "humAvg": 74.5,
     "humMin": 43.0,
     "humMax": 99.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "CJ": {
     "tempAvg": 17.1,
@@ -276,7 +276,7 @@
     "humAvg": 66.5,
     "humMin": 28.0,
     "humMax": 100.0,
-    "precAcc": 0.2
+    "precAcc": 0.0
   },
   "DK": {
     "tempAvg": 22.0,
@@ -960,7 +960,7 @@
     "humAvg": 68.5,
     "humMin": 39.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "WN": {
     "tempAvg": 17.0,
@@ -1410,7 +1410,7 @@
     "humAvg": 48.9,
     "humMin": 14.0,
     "humMax": 87.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "YB": {
     "tempAvg": 16.6,
@@ -1554,7 +1554,7 @@
     "humAvg": 62.1,
     "humMin": 39.0,
     "humMax": 95.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "YS": {
     "tempAvg": 21.4,
@@ -1707,7 +1707,7 @@
     "humAvg": 54.8,
     "humMin": 6.0,
     "humMax": 100.0,
-    "precAcc": 1.7,
+    "precAcc": 1.1,
     "precMin": 0,
     "precMax": 0.2
   }
