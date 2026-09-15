@@ -177,7 +177,7 @@
     "humAvg": 90.8,
     "humMin": 74.0,
     "humMax": 98.0,
-    "precAcc": null
+    "precAcc": 9.2
   },
   "D4": {
     "tempAvg": 20.9,
@@ -1014,7 +1014,7 @@
     "humAvg": 92.8,
     "humMin": 76.0,
     "humMax": 99.0,
-    "precAcc": null
+    "precAcc": 20.2
   },
   "WT": {
     "tempAvg": 20.7,
@@ -1707,7 +1707,7 @@
     "humAvg": 69.1,
     "humMin": 14.0,
     "humMax": 100.0,
-    "precAcc": 1496.0,
+    "precAcc": 1525.4,
     "precMin": 0,
     "precMax": 80.8
   }
