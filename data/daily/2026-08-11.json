@@ -18,9 +18,9 @@
     "precAcc": 0.0
   },
   "C8": {
-    "tempAvg": 27.1,
-    "tempMin": 20.0,
-    "tempMax": 35.1,
+    "tempAvg": 28.0,
+    "tempMin": 21.0,
+    "tempMax": 35.4,
     "humAvg": 54.1,
     "humMin": 30.0,
     "humMax": 86.0,
