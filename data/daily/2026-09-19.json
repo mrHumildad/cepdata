@@ -78,7 +78,7 @@
     "humAvg": 79.9,
     "humMin": 56.0,
     "humMax": 97.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "CJ": {
     "tempAvg": 18.5,
@@ -1014,7 +1014,7 @@
     "humAvg": 86.9,
     "humMin": 56.0,
     "humMax": 99.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "WT": {
     "tempAvg": 21.9,
@@ -1131,7 +1131,7 @@
     "humAvg": 69.7,
     "humMin": 52.0,
     "humMax": 92.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "X9": {
     "tempAvg": 20.9,
@@ -1419,7 +1419,7 @@
     "humAvg": 75.0,
     "humMin": 47.0,
     "humMax": 98.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "YC": {
     "tempAvg": 19.0,
@@ -1707,7 +1707,7 @@
     "humAvg": 68.2,
     "humMin": 16.0,
     "humMax": 100.0,
-    "precAcc": 1.1,
+    "precAcc": 0.7,
     "precMin": 0,
     "precMax": 0.2
   }
