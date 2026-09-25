@@ -450,10 +450,10 @@
     "precAcc": 0.0
   },
   "U4": {
-    "tempAvg": 21.6,
+    "tempAvg": 22.0,
     "tempMin": 15.6,
     "tempMax": 29.7,
-    "humAvg": 64.7,
+    "humAvg": 61.9,
     "humMin": 36.0,
     "humMax": 100.0,
     "precAcc": 0.0
@@ -1704,7 +1704,7 @@
     "tempAvg": 21.1,
     "tempMin": 4.9,
     "tempMax": 34.7,
-    "humAvg": 59.0,
+    "humAvg": 58.9,
     "humMin": 13.0,
     "humMax": 100.0,
     "precAcc": 0.0,
