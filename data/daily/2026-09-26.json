@@ -1566,13 +1566,13 @@
     "precAcc": 0.0
   },
   "YT": {
-    "tempAvg": null,
-    "tempMin": null,
-    "tempMax": null,
-    "humAvg": null,
-    "humMin": null,
-    "humMax": null,
-    "precAcc": null
+    "tempAvg": 15.0,
+    "tempMin": 9.5,
+    "tempMax": 22.7,
+    "humAvg": 40.4,
+    "humMin": 24.0,
+    "humMax": 73.0,
+    "precAcc": 0.0
   },
   "YU": {
     "tempAvg": 19.8,
@@ -1704,7 +1704,7 @@
     "tempAvg": 20.5,
     "tempMin": 3.8,
     "tempMax": 32.1,
-    "humAvg": 69.2,
+    "humAvg": 69.0,
     "humMin": 12.0,
     "humMax": 100.0,
     "precAcc": 0.2,
