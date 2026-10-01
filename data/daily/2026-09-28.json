@@ -516,8 +516,8 @@
     "tempAvg": 20.7,
     "tempMin": 18.0,
     "tempMax": 24.6,
-    "humAvg": 76.3,
-    "humMin": 45.0,
+    "humAvg": 78.4,
+    "humMin": 54.0,
     "humMax": 95.0,
     "precAcc": 0.0
   },
@@ -1566,11 +1566,11 @@
     "precAcc": 0.0
   },
   "YT": {
-    "tempAvg": 12.9,
+    "tempAvg": 14.8,
     "tempMin": 10.4,
-    "tempMax": 18.3,
-    "humAvg": 84.2,
-    "humMin": 56.0,
+    "tempMax": 20.2,
+    "humAvg": 72.4,
+    "humMin": 45.0,
     "humMax": 95.0,
     "precAcc": 0.0
   },
@@ -1704,7 +1704,7 @@
     "tempAvg": 20.8,
     "tempMin": 6.0,
     "tempMax": 30.4,
-    "humAvg": 76.3,
+    "humAvg": 76.2,
     "humMin": 35.0,
     "humMax": 100.0,
     "precAcc": 39.7,
