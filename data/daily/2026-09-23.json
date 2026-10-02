@@ -1167,7 +1167,7 @@
     "humAvg": 68.0,
     "humMin": 24.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "XD": {
     "tempAvg": 22.1,
@@ -1707,7 +1707,7 @@
     "humAvg": 61.2,
     "humMin": 16.0,
     "humMax": 100.0,
-    "precAcc": 0.3,
+    "precAcc": 0.2,
     "precMin": 0,
     "precMax": 0.1
   }

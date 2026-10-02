@@ -987,7 +987,7 @@
     "humAvg": 79.6,
     "humMin": 49.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "WQ": {
     "tempAvg": 17.6,
@@ -1707,7 +1707,7 @@
     "humAvg": 69.0,
     "humMin": 12.0,
     "humMax": 100.0,
-    "precAcc": 0.2,
+    "precAcc": 0.1,
     "precMin": 0,
     "precMax": 0.1
   }

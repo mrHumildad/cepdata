@@ -438,7 +438,7 @@
     "humAvg": 69.9,
     "humMin": 31.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "U3": {
     "tempAvg": 22.8,
@@ -924,7 +924,7 @@
     "humAvg": 57.2,
     "humMin": 25.0,
     "humMax": 95.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "WJ": {
     "tempAvg": 24.6,
@@ -1707,8 +1707,8 @@
     "humAvg": 55.5,
     "humMin": 2.0,
     "humMax": 100.0,
-    "precAcc": 0.2,
+    "precAcc": 0.0,
     "precMin": 0,
-    "precMax": 0.1
+    "precMax": 0.0
   }
 }

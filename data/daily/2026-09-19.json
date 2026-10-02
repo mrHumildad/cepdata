@@ -582,7 +582,7 @@
     "humAvg": 67.7,
     "humMin": 41.0,
     "humMax": 98.0,
-    "precAcc": 0.2
+    "precAcc": 0.1
   },
   "UO": {
     "tempAvg": 19.5,
@@ -1707,8 +1707,8 @@
     "humAvg": 68.1,
     "humMin": 16.0,
     "humMax": 100.0,
-    "precAcc": 0.7,
+    "precAcc": 0.6,
     "precMin": 0,
-    "precMax": 0.2
+    "precMax": 0.1
   }
 }
