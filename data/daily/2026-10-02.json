@@ -1410,7 +1410,7 @@
     "humAvg": 89.7,
     "humMin": 74.0,
     "humMax": 99.0,
-    "precAcc": 0.8
+    "precAcc": 0.7
   },
   "YB": {
     "tempAvg": 18.7,
@@ -1707,7 +1707,7 @@
     "humAvg": 92.0,
     "humMin": 51.0,
     "humMax": 100.0,
-    "precAcc": 2700.4,
+    "precAcc": 2700.3,
     "precMin": 0,
     "precMax": 253.7
   }
