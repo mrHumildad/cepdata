@@ -483,7 +483,7 @@
     "humAvg": 86.4,
     "humMin": 61.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "UA": {
     "tempAvg": 21.2,
@@ -1566,13 +1566,13 @@
     "precAcc": 0.2
   },
   "YT": {
-    "tempAvg": null,
-    "tempMin": null,
-    "tempMax": null,
-    "humAvg": null,
-    "humMin": null,
-    "humMax": null,
-    "precAcc": null
+    "tempAvg": 11.8,
+    "tempMin": 8.4,
+    "tempMax": 17.9,
+    "humAvg": 86.2,
+    "humMin": 56.0,
+    "humMax": 100.0,
+    "precAcc": 8.5
   },
   "YU": {
     "tempAvg": 16.1,
@@ -1701,13 +1701,13 @@
     "precAcc": 0.3
   },
   "dayStats": {
-    "tempAvg": 18.3,
+    "tempAvg": 18.2,
     "tempMin": 5.5,
     "tempMax": 30.7,
     "humAvg": 86.7,
     "humMin": 40.0,
     "humMax": 100.0,
-    "precAcc": 1089.0,
+    "precAcc": 1097.4,
     "precMin": 0,
     "precMax": 108.1
   }
