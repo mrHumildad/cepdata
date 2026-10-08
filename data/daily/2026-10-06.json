@@ -789,7 +789,7 @@
     "humAvg": 94.8,
     "humMin": 74.0,
     "humMax": 100.0,
-    "precAcc": 10.8
+    "precAcc": 11.7
   },
   "VU": {
     "tempAvg": 17.8,
@@ -996,7 +996,7 @@
     "humAvg": 97.3,
     "humMin": 72.0,
     "humMax": 100.0,
-    "precAcc": 14.6
+    "precAcc": 14.2
   },
   "WR": {
     "tempAvg": 19.7,
@@ -1566,13 +1566,13 @@
     "precAcc": 2.6
   },
   "YT": {
-    "tempAvg": 10.3,
+    "tempAvg": 10.6,
     "tempMin": 7.2,
     "tempMax": 15.7,
-    "humAvg": 90.9,
+    "humAvg": 94.1,
     "humMin": 67.0,
     "humMax": 100.0,
-    "precAcc": 0.4
+    "precAcc": 1.7
   },
   "YU": {
     "tempAvg": 14.7,
@@ -1608,7 +1608,7 @@
     "humAvg": 87.0,
     "humMin": 53.0,
     "humMax": 100.0,
-    "precAcc": 4.2
+    "precAcc": 4.9
   },
   "Z2": {
     "tempAvg": 5.8,
@@ -1617,7 +1617,7 @@
     "humAvg": 94.5,
     "humMin": 72.0,
     "humMax": 99.0,
-    "precAcc": 6.0
+    "precAcc": 7.3
   },
   "Z3": {
     "tempAvg": 8.8,
@@ -1626,7 +1626,7 @@
     "humAvg": 79.4,
     "humMin": 43.0,
     "humMax": 100.0,
-    "precAcc": 2.3
+    "precAcc": 2.2
   },
   "Z5": {
     "tempAvg": 7.2,
@@ -1635,7 +1635,7 @@
     "humAvg": 86.6,
     "humMin": 51.0,
     "humMax": 100.0,
-    "precAcc": 3.1
+    "precAcc": 3.8
   },
   "Z6": {
     "tempAvg": 8.8,
@@ -1653,7 +1653,7 @@
     "humAvg": 78.8,
     "humMin": 39.0,
     "humMax": 100.0,
-    "precAcc": 10.3
+    "precAcc": 10.5
   },
   "Z9": {
     "tempAvg": 8.8,
@@ -1662,7 +1662,7 @@
     "humAvg": 86.6,
     "humMin": 49.0,
     "humMax": 98.0,
-    "precAcc": 4.1
+    "precAcc": 5.3
   },
   "ZB": {
     "tempAvg": 6.9,
@@ -1671,7 +1671,7 @@
     "humAvg": 87.4,
     "humMin": 38.0,
     "humMax": 100.0,
-    "precAcc": 10.9
+    "precAcc": 11.3
   },
   "ZC": {
     "tempAvg": 7.9,
@@ -1680,7 +1680,7 @@
     "humAvg": 77.2,
     "humMin": 41.0,
     "humMax": 99.0,
-    "precAcc": 1.5
+    "precAcc": 2.0
   },
   "ZD": {
     "tempAvg": 6.5,
@@ -1707,7 +1707,7 @@
     "humAvg": 92.1,
     "humMin": 38.0,
     "humMax": 100.0,
-    "precAcc": 2172.0,
+    "precAcc": 2178.7,
     "precMin": 0,
     "precMax": 83.6
   }
