@@ -18,10 +18,10 @@
     "precAcc": 0.0
   },
   "C8": {
-    "tempAvg": 13.2,
-    "tempMin": 8.3,
+    "tempAvg": 11.7,
+    "tempMin": 5.5,
     "tempMax": 17.1,
-    "humAvg": 59.1,
+    "humAvg": 58.1,
     "humMin": 34.0,
     "humMax": 94.0,
     "precAcc": 0.0
@@ -660,7 +660,7 @@
     "tempAvg": 12.0,
     "tempMin": 4.2,
     "tempMax": 20.8,
-    "humAvg": 69.3,
+    "humAvg": 69.1,
     "humMin": 31.0,
     "humMax": 98.0,
     "precAcc": 0.0
@@ -1701,7 +1701,7 @@
     "precAcc": 0.0
   },
   "dayStats": {
-    "tempAvg": 12.3,
+    "tempAvg": 12.2,
     "tempMin": -5.8,
     "tempMax": 24.3,
     "humAvg": 58.0,
