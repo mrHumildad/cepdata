@@ -1566,10 +1566,10 @@
     "precAcc": 0.0
   },
   "YT": {
-    "tempAvg": 9.4,
+    "tempAvg": 9.1,
     "tempMin": 4.2,
     "tempMax": 15.0,
-    "humAvg": 72.9,
+    "humAvg": 74.0,
     "humMin": 54.0,
     "humMax": 90.0,
     "precAcc": 0.0
