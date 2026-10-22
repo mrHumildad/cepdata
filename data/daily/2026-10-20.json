@@ -1035,10 +1035,10 @@
     "precAcc": 0.0
   },
   "WV": {
-    "tempAvg": 11.8,
-    "tempMin": 9.5,
+    "tempAvg": 11.0,
+    "tempMin": 5.9,
     "tempMax": 15.4,
-    "humAvg": 95.2,
+    "humAvg": 96.2,
     "humMin": 80.0,
     "humMax": 100.0,
     "precAcc": 0.0
