@@ -630,12 +630,12 @@
     "precAcc": 0.0
   },
   "UW": {
-    "tempAvg": 15.3,
+    "tempAvg": 16.6,
     "tempMin": 13.2,
-    "tempMax": 19.2,
-    "humAvg": 55.3,
-    "humMin": 44.0,
-    "humMax": 63.0,
+    "tempMax": 19.6,
+    "humAvg": 63.8,
+    "humMin": 45.0,
+    "humMax": 91.0,
     "precAcc": 0.0
   },
   "UX": {
@@ -1701,7 +1701,7 @@
     "precAcc": 0.0
   },
   "dayStats": {
-    "tempAvg": 11.3,
+    "tempAvg": 11.4,
     "tempMin": -2.6,
     "tempMax": 21.9,
     "humAvg": 72.0,
