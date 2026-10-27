@@ -1608,7 +1608,7 @@
     "humAvg": 85.5,
     "humMin": 46.0,
     "humMax": 100.0,
-    "precAcc": 0.6
+    "precAcc": 1.2
   },
   "Z2": {
     "tempAvg": -0.1,
@@ -1707,7 +1707,7 @@
     "humAvg": 67.0,
     "humMin": 9.0,
     "humMax": 100.0,
-    "precAcc": 73.3,
+    "precAcc": 73.9,
     "precMin": 0,
     "precMax": 25.4
   }
