@@ -252,13 +252,13 @@
     "precAcc": 0.2
   },
   "DG": {
-    "tempAvg": 10.0,
+    "tempAvg": 10.2,
     "tempMin": 7.4,
     "tempMax": 16.2,
-    "humAvg": 68.8,
+    "humAvg": 67.3,
     "humMin": 38.0,
     "humMax": 93.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "DI": {
     "tempAvg": 17.2,
@@ -1686,7 +1686,7 @@
     "tempAvg": 9.3,
     "tempMin": 3.3,
     "tempMax": 12.9,
-    "humAvg": 47.2,
+    "humAvg": 48.3,
     "humMin": 11.0,
     "humMax": 100.0,
     "precAcc": null
@@ -1707,7 +1707,7 @@
     "humAvg": 80.2,
     "humMin": 5.0,
     "humMax": 100.0,
-    "precAcc": 10.5,
+    "precAcc": 10.4,
     "precMin": 0,
     "precMax": 0.3
   }
