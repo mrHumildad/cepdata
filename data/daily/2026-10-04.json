@@ -1131,7 +1131,7 @@
     "humAvg": 86.3,
     "humMin": 67.0,
     "humMax": 100.0,
-    "precAcc": 3.6
+    "precAcc": 3.5
   },
   "X9": {
     "tempAvg": 19.5,
@@ -1707,7 +1707,7 @@
     "humAvg": 87.8,
     "humMin": 45.0,
     "humMax": 100.0,
-    "precAcc": 4331.3,
+    "precAcc": 4331.2,
     "precMin": 0,
     "precMax": 168.6
   }
