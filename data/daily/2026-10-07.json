@@ -537,7 +537,7 @@
     "humAvg": 76.9,
     "humMin": 53.0,
     "humMax": 100.0,
-    "precAcc": 0.3
+    "precAcc": 0.1
   },
   "UI": {
     "tempAvg": 11.0,
@@ -825,7 +825,7 @@
     "humAvg": 72.1,
     "humMin": 44.0,
     "humMax": 100.0,
-    "precAcc": 0.2
+    "precAcc": 0.1
   },
   "VZ": {
     "tempAvg": 18.9,
@@ -1707,7 +1707,7 @@
     "humAvg": 82.4,
     "humMin": 38.0,
     "humMax": 100.0,
-    "precAcc": 222.1,
+    "precAcc": 221.8,
     "precMin": 0,
     "precMax": 19.0
   }

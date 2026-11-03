@@ -1077,7 +1077,7 @@
     "humAvg": 58.6,
     "humMin": 32.0,
     "humMax": 87.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "X3": {
     "tempAvg": 12.2,
@@ -1707,7 +1707,7 @@
     "humAvg": 58.0,
     "humMin": 4.0,
     "humMax": 100.0,
-    "precAcc": 1.4,
+    "precAcc": 1.3,
     "precMin": 0,
     "precMax": 0.3
   }

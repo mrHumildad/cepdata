@@ -1374,7 +1374,7 @@
     "humAvg": 41.0,
     "humMin": 18.0,
     "humMax": 85.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "Y5": {
     "tempAvg": 14.4,
@@ -1428,7 +1428,7 @@
     "humAvg": 71.0,
     "humMin": 46.0,
     "humMax": 86.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "YD": {
     "tempAvg": 12.3,
@@ -1707,7 +1707,7 @@
     "humAvg": 70.7,
     "humMin": 6.0,
     "humMax": 100.0,
-    "precAcc": 5.6,
+    "precAcc": 5.4,
     "precMin": 0,
     "precMax": 0.3
   }

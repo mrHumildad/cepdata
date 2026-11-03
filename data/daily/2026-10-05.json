@@ -573,7 +573,7 @@
     "humAvg": 85.8,
     "humMin": 50.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "UN": {
     "tempAvg": 18.6,
@@ -1707,7 +1707,7 @@
     "humAvg": 86.7,
     "humMin": 40.0,
     "humMax": 100.0,
-    "precAcc": 1098.1,
+    "precAcc": 1098.0,
     "precMin": 0,
     "precMax": 108.1
   }
