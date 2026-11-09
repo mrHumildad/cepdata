@@ -96,7 +96,7 @@
     "humAvg": 91.7,
     "humMin": 48.0,
     "humMax": 100.0,
-    "precAcc": 0.2
+    "precAcc": 0.1
   },
   "CP": {
     "tempAvg": 8.7,
@@ -222,7 +222,7 @@
     "humAvg": 73.3,
     "humMin": 44.0,
     "humMax": 88.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "D9": {
     "tempAvg": 13.3,
@@ -483,7 +483,7 @@
     "humAvg": 90.8,
     "humMin": 63.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "UA": {
     "tempAvg": 13.2,
@@ -1014,7 +1014,7 @@
     "humAvg": 77.6,
     "humMin": 51.0,
     "humMax": 98.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "WT": {
     "tempAvg": 13.4,
@@ -1050,7 +1050,7 @@
     "humAvg": 91.0,
     "humMin": 63.0,
     "humMax": 100.0,
-    "precAcc": 0.3
+    "precAcc": 0.2
   },
   "WX": {
     "tempAvg": 9.1,
@@ -1077,7 +1077,7 @@
     "humAvg": 77.0,
     "humMin": 54.0,
     "humMax": 100.0,
-    "precAcc": 0.3
+    "precAcc": 0.1
   },
   "X3": {
     "tempAvg": 11.1,
@@ -1095,7 +1095,7 @@
     "humAvg": 73.6,
     "humMin": 60.0,
     "humMax": 85.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "X5": {
     "tempAvg": 9.2,
@@ -1122,7 +1122,7 @@
     "humAvg": 87.4,
     "humMin": 59.0,
     "humMax": 100.0,
-    "precAcc": 0.2
+    "precAcc": 0.1
   },
   "X8": {
     "tempAvg": 15.2,
@@ -1131,7 +1131,7 @@
     "humAvg": 88.3,
     "humMin": 63.0,
     "humMax": 100.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "X9": {
     "tempAvg": 12.3,
@@ -1230,7 +1230,7 @@
     "humAvg": 88.6,
     "humMin": 57.0,
     "humMax": 100.0,
-    "precAcc": 0.2
+    "precAcc": 0.1
   },
   "XK": {
     "tempAvg": 4.4,
@@ -1329,7 +1329,7 @@
     "humAvg": 87.9,
     "humMin": 65.0,
     "humMax": 98.0,
-    "precAcc": 0.2
+    "precAcc": 0.0
   },
   "XV": {
     "tempAvg": 12.3,
@@ -1419,7 +1419,7 @@
     "humAvg": 82.7,
     "humMin": 51.0,
     "humMax": 98.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "YC": {
     "tempAvg": 7.4,
@@ -1707,7 +1707,7 @@
     "humAvg": 81.9,
     "humMin": 10.0,
     "humMax": 100.0,
-    "precAcc": 12.1,
+    "precAcc": 10.7,
     "precMin": 0,
     "precMax": 2.1
   }
