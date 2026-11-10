@@ -429,7 +429,7 @@
     "humAvg": null,
     "humMin": null,
     "humMax": null,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "U2": {
     "tempAvg": 11.4,
@@ -1707,7 +1707,7 @@
     "humAvg": 81.9,
     "humMin": 10.0,
     "humMax": 100.0,
-    "precAcc": 10.7,
+    "precAcc": 10.6,
     "precMin": 0,
     "precMax": 2.1
   }

@@ -78,7 +78,7 @@
     "humAvg": 83.1,
     "humMin": 56.0,
     "humMax": 99.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "CJ": {
     "tempAvg": 7.9,
@@ -1428,7 +1428,7 @@
     "humAvg": 78.6,
     "humMin": 54.0,
     "humMax": 94.0,
-    "precAcc": 0.1
+    "precAcc": 0.0
   },
   "YD": {
     "tempAvg": 12.7,
@@ -1707,7 +1707,7 @@
     "humAvg": 85.5,
     "humMin": 11.0,
     "humMax": 100.0,
-    "precAcc": 4.6,
+    "precAcc": 4.4,
     "precMin": 0,
     "precMax": 0.2
   }
