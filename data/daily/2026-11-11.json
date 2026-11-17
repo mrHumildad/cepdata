@@ -1698,7 +1698,7 @@
     "humAvg": 90.4,
     "humMin": 52.0,
     "humMax": 100.0,
-    "precAcc": 19.9
+    "precAcc": 20.3
   },
   "dayStats": {
     "tempAvg": 15.3,
@@ -1707,7 +1707,7 @@
     "humAvg": 85.2,
     "humMin": 43.0,
     "humMax": 100.0,
-    "precAcc": 2096.5,
+    "precAcc": 2096.9,
     "precMin": 0,
     "precMax": 32.0
   }
