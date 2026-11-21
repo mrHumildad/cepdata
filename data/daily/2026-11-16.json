@@ -789,7 +789,7 @@
     "humAvg": 88.1,
     "humMin": 60.0,
     "humMax": 100.0,
-    "precAcc": 0.0
+    "precAcc": 0.3
   },
   "VU": {
     "tempAvg": 13.3,
@@ -1617,7 +1617,7 @@
     "humAvg": 92.1,
     "humMin": 73.0,
     "humMax": 98.0,
-    "precAcc": 0.0
+    "precAcc": 0.3
   },
   "Z3": {
     "tempAvg": 2.0,
@@ -1707,8 +1707,8 @@
     "humAvg": 80.2,
     "humMin": 25.0,
     "humMax": 100.0,
-    "precAcc": 3.0,
+    "precAcc": 3.6,
     "precMin": 0,
-    "precMax": 0.2
+    "precMax": 0.3
   }
 }

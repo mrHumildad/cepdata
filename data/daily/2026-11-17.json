@@ -1374,7 +1374,7 @@
     "humAvg": 83.8,
     "humMin": 71.0,
     "humMax": 96.0,
-    "precAcc": 0.2
+    "precAcc": 0.1
   },
   "Y5": {
     "tempAvg": 14.2,
@@ -1653,7 +1653,7 @@
     "humAvg": 80.6,
     "humMin": 66.0,
     "humMax": 89.0,
-    "precAcc": 1.4
+    "precAcc": 1.5
   },
   "Z9": {
     "tempAvg": 5.2,
