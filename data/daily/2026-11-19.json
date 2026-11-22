@@ -1233,11 +1233,11 @@
     "precAcc": 0.1
   },
   "XK": {
-    "tempAvg": 8.6,
-    "tempMin": 7.4,
+    "tempAvg": 5.6,
+    "tempMin": 2.5,
     "tempMax": 9.3,
-    "humAvg": 100.0,
-    "humMin": 100.0,
+    "humAvg": 79.5,
+    "humMin": 53.0,
     "humMax": 100.0,
     "precAcc": 1.4
   },
@@ -1704,7 +1704,7 @@
     "tempAvg": 13.0,
     "tempMin": -4.5,
     "tempMax": 22.0,
-    "humAvg": 64.8,
+    "humAvg": 64.7,
     "humMin": 27.0,
     "humMax": 100.0,
     "precAcc": 271.8,

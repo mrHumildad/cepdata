@@ -1233,13 +1233,13 @@
     "precAcc": 0.0
   },
   "XK": {
-    "tempAvg": null,
-    "tempMin": null,
-    "tempMax": null,
-    "humAvg": null,
-    "humMin": null,
-    "humMax": null,
-    "precAcc": null
+    "tempAvg": 4.0,
+    "tempMin": 2.0,
+    "tempMax": 6.8,
+    "humAvg": 63.1,
+    "humMin": 45.0,
+    "humMax": 83.0,
+    "precAcc": 0.0
   },
   "XL": {
     "tempAvg": 12.4,
@@ -1704,7 +1704,7 @@
     "tempAvg": 9.5,
     "tempMin": -4.6,
     "tempMax": 19.9,
-    "humAvg": 73.0,
+    "humAvg": 72.9,
     "humMin": 33.0,
     "humMax": 100.0,
     "precAcc": 0.3,
