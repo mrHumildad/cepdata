@@ -420,7 +420,7 @@
     "humAvg": 74.3,
     "humMin": 38.0,
     "humMax": 98.0,
-    "precAcc": 0.0
+    "precAcc": 0.2
   },
   "MW": {
     "tempAvg": null,
@@ -1707,7 +1707,7 @@
     "humAvg": 66.7,
     "humMin": 28.0,
     "humMax": 100.0,
-    "precAcc": 52.3,
+    "precAcc": 52.5,
     "precMin": 0,
     "precMax": 8.5
   }
